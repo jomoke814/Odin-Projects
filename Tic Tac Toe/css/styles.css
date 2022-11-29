@@ -58,12 +58,15 @@ svg {
 }
 
 .cell.x::before,
-.cell.x::after {
+.cell.x::after,
+.cell.circle::before {
     background-color: hsl(223, 84%, 55%);
 }
 
+
 .game-board.x .cell:not(.x):not(.circle):hover::before,
-.game-board.x .cell:not(.x):not(.circle):hover::after {
+.game-board.x .cell:not(.x):not(.circle):hover::after,
+.game-board.circle .cell:not(.x):not(.circle):hover::before{
     background-color: lightgray;
 }
 
@@ -89,19 +92,22 @@ svg {
 }
 
 .cell.circle::before,
-.cell.circle::after {
+.cell.circle::after,
+.game-board.circle .cell:not(.x):not(.circle):hover::before,
+.game-board.circle .cell:not(.x):not(.circle):hover::after {
     content: '';
     border-radius: 50px;
     position: absolute;
 }
 
-.cell.circle::before {
-    background-color: hsl(223, 84%, 55%);
+.cell.circle::before,
+.game-board.circle .cell:not(.x):not(.circle):hover::before {
     height: var(--main-mark-size);
     width: var(--main-mark-size);
 }
 
-.cell.circle::after {
+.cell.circle::after,
+.game-board.circle .cell:not(.x):not(.circle):hover::after {
     background-color: hsl(0, 0%, 65%);
     height: calc(var(--main-mark-size) * .7);
     width: calc(var(--main-mark-size) * .7);

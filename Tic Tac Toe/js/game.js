@@ -1,72 +1,9 @@
 const cellElements = document.querySelectorAll('[data-cell]');
 const gameBoard = document.querySelector('.game-board');
-const startGameBtn = document.querySelector('.start');
+const restartBtn = document.querySelector('.reset');
 const x_Mark = 'x'
 const circle_Mark = 'circle'
 let circleTurn
-
-//Creating players
-let createPlayer = () => {
-    (console.log('start creating player'))
-    for(let i = 0; i < 4; i++) {
-        if(gameBoardModule.playerArray.length >= 6) {
-            gameBoardModule.makePlayerMove();
-            (console.log('getting gameboard module'))
-            break;
-        }else if(gameBoardModule.playerArray.length == 0) {
-            (console.log('creating player1'))
-            let playerName = prompt("Whats your name Player1?");
-            if(playerName == '' || playerName == null) {
-                alert("Sorry, Name cannot be blank!");
-                continue;
-            }
-
-            let playerNumber = 1;
-            let assignSymbol = x_Mark;
-            alert("Your player1 assigned X");
-            gameBoardModule.playerArray.push(playerName,playerNumber,assignSymbol);
-            console.log('show content of player1array', gameBoardModule.playerArray);
-
-        }else if(gameBoardModule.playerArray.length !== 0 ) {
-            (console.log('creating player2'))
-            let playerName = prompt("Whats your name Player2?");
-            if(playerName == '' || playerName == null) {
-                alert("Sorry, Name cannot be blank!");
-                continue;
-            }
-
-            let playerNumber = 2;
-            let assignSymbol = circle_Mark;
-            alert("Your player1 assigned circle");
-            gameBoardModule.playerArray.push(playerName,playerNumber,assignSymbol);
-            console.log('show content of player2array', gameBoardModule.playerArray);
-        }
-    }
-};
-
-let gameBoardModule = (function () {
-    let gameBoard = [];
-    let playerArray = [];
-    (console.log('starting gameboard module'))
-    let makePlayerMove = () => {
-        (console.log('making player move'))
-        if(playerArray.length == 6 && gameBoard.length < 9) {
-            if(gameBoard.length == 0) {
-                gameBoard.push(playerArray[2]);
-                console.log('gameBoard array', gameBoard)
-            }else if(gameBoard[gameBoard.length - 1] == x_Mark) {
-                gameBoard.push(playerArray[5]);
-                console.log('gameBoard array', gameBoard)
-            } else if(gameBoard[gameBoard.length -1] == circle_Mark) {
-                gameBoard.push(playerArray[2])
-                console.log('gameBoard array', gameBoard)
-            }
-        };
-    }
-    
-    return {gameBoard, playerArray, makePlayerMove};
-})();
-startGameBtn.addEventListener('click', createPlayer);
 
 //adding hover effects gameBoard
 const setBoardHover = () => {
@@ -81,6 +18,19 @@ const setBoardHover = () => {
 
 //this a module
 let displayControlModule = (function () {
+    const winningMessageElement = document.getElementById('winningMsg');
+    const winningMessage = document.querySelector('[data-winning-msg]');
+    
+    const winCombination = [
+        [0,1,2],
+        [3,4,5],
+        [6,7,8],
+        [0,3,6],
+        [1,4,7],
+        [2,5,8],
+        [0,4,8],
+        [2,4,6]
+    ] 
    
     const startHover = () => {
         circleTurn = false
@@ -93,15 +43,44 @@ let displayControlModule = (function () {
 
     //adding mark from browser
     const handleClick = (e) => {
-    const cell = e.target
-    const currentMark = circleTurn ? circle_Mark : x_Mark
-    makeMaker(cell, currentMark)
-    // check winner
-    //check for draw
-    // switch turns
-    switchTurns()
-    setBoardHover()
+        const cell = e.target
+        const currentMark = circleTurn ? circle_Mark : x_Mark
+        makeMaker(cell, currentMark)
+        // check winner
+        if(checkWinner(currentMark)) {
+        endGame(false)
+        } else if (Draw()) {
+        endGame(true)
+        } else {
+        // switch turns
+        switchTurns()
+        setBoardHover()
+        }
     };
+
+    const Draw = () => {
+        return [...cellElements].every(cell => {
+            return cell.classList.contains(x_Mark) || cell.classList.contains(circle_Mark)
+        })
+    }
+
+    const checkWinner = (currentMark) => {
+        return winCombination.some(combination => {
+            return combination.every(index => {
+                return cellElements[index].classList.contains(currentMark)
+            })
+        })
+    };
+    
+    const endGame = (draw) => {
+        if(draw) {
+            winningMessage.innerText = 'Draw!'
+        } else {
+            winningMessage.innerText = `${circleTurn ? "O" : "X"} Wins`
+        }
+        winningMessageElement.classList.add('show')
+    }
+
     return{startHover, handleClick};
 })();
 displayControlModule.startHover()
@@ -115,4 +94,8 @@ const makeMaker = (cell, currentMark) => {
 const switchTurns = () => {
     circleTurn = !circleTurn
 };
+
+function resetGame() {
+    location.reload
+}
 

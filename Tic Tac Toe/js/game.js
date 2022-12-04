@@ -76,7 +76,7 @@ let displayControlModule = (function () {
         if(draw) {
             winningMessage.innerText = 'Draw!'
         } else {
-            winningMessage.innerText = `${circleTurn ? "O" : "X"} Wins`
+            winningMessage.innerText = `${circleTurn ? "O" : "X"} Wins!`
         }
         winningMessageElement.classList.add('show')
     }
@@ -95,7 +95,8 @@ const switchTurns = () => {
     circleTurn = !circleTurn
 };
 
-function resetGame() {
-    location.reload
-}
+const resetGame = () => {
+    location.reload();
+};
 
+restartBtn.addEventListener('click', resetGame)

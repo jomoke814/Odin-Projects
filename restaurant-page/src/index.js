@@ -1,1 +1,1 @@
-console.log("Starting up restaurant-page!");
+import './styles/style.css'

@@ -8,8 +8,9 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        assetModuleFilename: '[name][ext]',
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: {
         static: {
           directory: path.join(__dirname, './dist'),
@@ -30,6 +31,10 @@ module.exports = {
           {
             test: /\.css$/i,
             use: ['style-loader', 'css-loader'],
+          },
+          {
+            test: /\.(png|svg|jpg|jpeg|gif)$/i,
+            type: 'asset/resource',
           },
         ],
     },

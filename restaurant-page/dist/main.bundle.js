@@ -15,13 +15,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
 // Imports
 
 
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/rod-long-kImU-9S9uh8-unsplash.jpg */ "./src/assets/rod-long-kImU-9S9uh8-unsplash.jpg"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ../assets/default-monochrome.svg */ "./src/assets/default-monochrome.svg"), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap);"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nh1 {\n    font-family: 'Fraunces', serif;\n}\n\np {\n    font-family: 'Montserrat', sans-serif;\n}\n\nbody {\n}", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAEA;IACI,sBAAsB;IACtB,SAAS;IACT,UAAU;AACd;;AAEA;IACI,8BAA8B;AAClC;;AAEA;IACI,qCAAqC;AACzC;;AAEA;AACA","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nh1 {\n    font-family: 'Fraunces', serif;\n}\n\np {\n    font-family: 'Montserrat', sans-serif;\n}\n\nbody {\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat;\n    background-size: cover;\n    /* backdrop-filter: blur(1px); */\n}\n\nh1 {\n    font-family: 'Fraunces', serif;\n    font-size: 1rem;\n    text-transform: uppercase;\n}\n\nh2 {\n    font-size: 5rem;\n}\n\np {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 1rem;\n}\n\nbutton {\n    border: none;\n    border-radius: 20px;\n    background-color: hsl(19, 91%, 49%);\n    color: #fff;\n    font-weight: bold;\n    padding: 15px;\n    text-transform: uppercase;\n    width: 10%;\n}\n\n.content {\n    max-width: 1440px;\n    padding: 10px;\n}\n\n.navbar {\n    min-height: 60px;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.logo {\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_1___ + ");\n    background-repeat: no-repeat;\n    width: 100px;\n    height: 50px;\n}\n\n.nav-menu {\n    display: flex;\n}\n\nli {\n    list-style-type: none;\n}\n\n.nav-item {\n    color: #fafbfd;\n    font-weight: bold;\n    padding: 20px;\n}\n\n.nav-item:hover {\n    color: hsl(35, 77%, 62%);\n    text-decoration: underline;\n    transition: all 0.45sec ease-in-out;\n}\n\n.hero {\n    color: hsl(0,0%,100%);\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n} \n\n.intro {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 80px;\n    padding: 30px;\n}\n\n.intro button{\n    margin-top: 10px;\n    width: 30%;\n}\n\n.social-icons{\n    display: flex;\n    align-self: flex-end;\n}\n\n.social-icons img:hover {\n    transform: scale(1.1);\n}\n\n\n\n\n\n\n\n", "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAEA;IACI,sBAAsB;IACtB,SAAS;IACT,UAAU;AACd;;AAEA;IACI,mGAA8G;IAC9G,4BAA4B;IAC5B,sBAAsB;IACtB,gCAAgC;AACpC;;AAEA;IACI,8BAA8B;IAC9B,eAAe;IACf,yBAAyB;AAC7B;;AAEA;IACI,eAAe;AACnB;;AAEA;IACI,qCAAqC;IACrC,eAAe;AACnB;;AAEA;IACI,YAAY;IACZ,mBAAmB;IACnB,mCAAmC;IACnC,WAAW;IACX,iBAAiB;IACjB,aAAa;IACb,yBAAyB;IACzB,UAAU;AACd;;AAEA;IACI,iBAAiB;IACjB,aAAa;AACjB;;AAEA;IACI,gBAAgB;IAChB,aAAa;IACb,8BAA8B;IAC9B,mBAAmB;AACvB;;AAEA;IACI,mDAAmD;IACnD,4BAA4B;IAC5B,YAAY;IACZ,YAAY;AAChB;;AAEA;IACI,aAAa;AACjB;;AAEA;IACI,qBAAqB;AACzB;;AAEA;IACI,cAAc;IACd,iBAAiB;IACjB,aAAa;AACjB;;AAEA;IACI,wBAAwB;IACxB,0BAA0B;IAC1B,mCAAmC;AACvC;;AAEA;IACI,qBAAqB;IACrB,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;IACnB,aAAa;AACjB;;AAEA;IACI,aAAa;IACb,sBAAsB;IACtB,mBAAmB;IACnB,YAAY;IACZ,aAAa;AACjB;;AAEA;IACI,gBAAgB;IAChB,UAAU;AACd;;AAEA;IACI,aAAa;IACb,oBAAoB;AACxB;;AAEA;IACI,qBAAqB;AACzB","sourcesContent":["@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');\n\n* {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n}\n\nbody {\n    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),url('../assets/rod-long-kImU-9S9uh8-unsplash.jpg');\n    background-repeat: no-repeat;\n    background-size: cover;\n    /* backdrop-filter: blur(1px); */\n}\n\nh1 {\n    font-family: 'Fraunces', serif;\n    font-size: 1rem;\n    text-transform: uppercase;\n}\n\nh2 {\n    font-size: 5rem;\n}\n\np {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 1rem;\n}\n\nbutton {\n    border: none;\n    border-radius: 20px;\n    background-color: hsl(19, 91%, 49%);\n    color: #fff;\n    font-weight: bold;\n    padding: 15px;\n    text-transform: uppercase;\n    width: 10%;\n}\n\n.content {\n    max-width: 1440px;\n    padding: 10px;\n}\n\n.navbar {\n    min-height: 60px;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.logo {\n    background: url('../assets/default-monochrome.svg');\n    background-repeat: no-repeat;\n    width: 100px;\n    height: 50px;\n}\n\n.nav-menu {\n    display: flex;\n}\n\nli {\n    list-style-type: none;\n}\n\n.nav-item {\n    color: #fafbfd;\n    font-weight: bold;\n    padding: 20px;\n}\n\n.nav-item:hover {\n    color: hsl(35, 77%, 62%);\n    text-decoration: underline;\n    transition: all 0.45sec ease-in-out;\n}\n\n.hero {\n    color: hsl(0,0%,100%);\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n} \n\n.intro {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 80px;\n    padding: 30px;\n}\n\n.intro button{\n    margin-top: 10px;\n    width: 30%;\n}\n\n.social-icons{\n    display: flex;\n    align-self: flex-end;\n}\n\n.social-icons img:hover {\n    transform: scale(1.1);\n}\n\n\n\n\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -118,6 +125,41 @@ module.exports = function (cssWithMappingToString) {
     }
   };
   return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
+/*!********************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
+  \********************************************************/
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    options = {};
+  }
+  if (!url) {
+    return url;
+  }
+  url = String(url.__esModule ? url.default : url);
+
+  // If url is already wrapped in quotes, remove them
+  if (/^['"].*['"]$/.test(url)) {
+    url = url.slice(1, -1);
+  }
+  if (options.hash) {
+    url += options.hash;
+  }
+
+  // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+  if (/["'() \t\n]|(%20)/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+  return url;
 };
 
 /***/ }),
@@ -516,6 +558,26 @@ module.exports = styleTagTransform;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
 
+
+/***/ }),
+
+/***/ "./src/assets/default-monochrome.svg":
+/*!*******************************************!*\
+  !*** ./src/assets/default-monochrome.svg ***!
+  \*******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "image/default-monochrome.svg";
+
+/***/ }),
+
+/***/ "./src/assets/rod-long-kImU-9S9uh8-unsplash.jpg":
+/*!******************************************************!*\
+  !*** ./src/assets/rod-long-kImU-9S9uh8-unsplash.jpg ***!
+  \******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "image/rod-long-kImU-9S9uh8-unsplash.jpg";
 
 /***/ })
 

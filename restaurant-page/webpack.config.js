@@ -8,7 +8,7 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        assetModuleFilename: '[name][ext]',
+        assetModuleFilename: 'image/[name][ext]',
     },
     devtool: 'source-map',
     devServer: {
@@ -23,6 +23,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           title: 'restaurant page',
           filename: 'index.html',
+          favicon: 'src/assets/icons8-restaurant-building-16.png',
           template: 'src/template.html'
         }),
     ],
@@ -33,9 +34,13 @@ module.exports = {
             use: ['style-loader', 'css-loader'],
           },
           {
+            test: /\.html$/i,
+            use: ['html-loader'],
+          },
+          {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
             type: 'asset/resource',
-          },
+          }
         ],
     },
     optimization: {

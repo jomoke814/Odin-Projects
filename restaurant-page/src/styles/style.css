@@ -7,10 +7,14 @@
 }
 
 body {
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),url('../assets/rod-long-kImU-9S9uh8-unsplash.jpg');
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),url('../assets/rod-long-kImU-9S9uh8-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    
+    transition: 5s;
+    animation: change 10s infinite ease-in-out;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
 }
 
 h1 {
@@ -105,43 +109,21 @@ li {
     align-self: flex-end;
 }
 
-.social-icons .img1 {
-    background: url('../assets/icons8-whatsapp.svg');
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50px;
-    background-repeat: no-repeat;
+.social-icons img:hover {
+    transform: scale(1.1);
 }
 
-.social-icons .img2 {
-    background: url('../assets/icons8-instagram.svg');
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50px;
-    background-repeat: no-repeat;
+@keyframes change {
+    0% {
+        background-image: url('../assets/fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg');
+    }
+    50% {
+        background-image: url('../assets/siyuan-g_V2rt6iG7A-unsplash.jpg');
+    }
+    100% {
+        background-image: url('../assets/rod-long-kImU-9S9uh8-unsplash.jpg');
+    }
 }
-
-.social-icons .img3 {
-    background: url('../assets/icons8-facebook.svg');
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50px;
-    background-repeat: no-repeat;
-}
-
-.social-icons .img4 {
-    background: url('../assets/icons8-twitter.svg');
-    width: 50px;
-    height: 50px;
-    border: none;
-    border-radius: 50px;
-    background-repeat: no-repeat;
-}
-
-
 
 
 

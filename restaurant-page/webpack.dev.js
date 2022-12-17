@@ -1,9 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const common = require('./webpack.common');
+const { merge } = require('webpack-merge');
 
-module.exports = {
+module.exports = merge(common, {
     mode: 'development',
-    entry: './src/index.js',
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -29,21 +30,13 @@ module.exports = {
     ],
     module: {
         rules: [
-          {
+            {
             test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-          },
-          {
-            test: /\.html$/i,
-            use: ['html-loader'],
-          },
-          {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            type: 'asset/resource',
-          }
+            use: ['style-loader', "css-loader"],
+            },
         ],
     },
     optimization: {
         runtimeChunk: 'single',
     },
-};
+});

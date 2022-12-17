@@ -14,7 +14,7 @@ body {
     animation: change 10s infinite ease-in-out;
     animation-direction: alternate;
     animation-fill-mode: forwards;
-    animation-play-state: running;
+    animation-play-state: running; 
 }
 
 h1 {
@@ -89,6 +89,8 @@ li {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    position: relative;
+    margin: 30px;
 } 
 
 .intro {
@@ -107,6 +109,9 @@ li {
 .social-icons{
     display: flex;
     align-self: flex-end;
+    position: absolute;
+    top: 250px;
+    writing-mode: vertical-lr;
 }
 
 .social-icons img:hover {
@@ -126,6 +131,8 @@ li {
 }
 
 
-
+/* #3882f6 */
+/* #E5E7EB */
+/* #1F2937 */
 
 

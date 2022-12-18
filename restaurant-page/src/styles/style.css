@@ -44,7 +44,7 @@ button {
 
 button:hover {
     color: hsl(212, 91%, 50%);
-    background-color: transparent;
+    background-color: #fff;
     text-decoration: underline;
 }
 

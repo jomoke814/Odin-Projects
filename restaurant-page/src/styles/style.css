@@ -42,6 +42,12 @@ button {
     width: 10%;
 }
 
+button:hover {
+    color: hsl(212, 91%, 50%);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 .content {
     max-width: 1440px;
     padding: 10px;

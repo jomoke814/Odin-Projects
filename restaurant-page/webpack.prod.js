@@ -50,4 +50,7 @@ module.exports = merge(common, {
         ],
         runtimeChunk: 'single',
     },
+    performance: {
+        hints: false,
+    },
 });

@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+}
+
+header {
     background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),url('../assets/rod-long-kImU-9S9uh8-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -14,6 +24,7 @@ body {
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-play-state: running; 
+    padding: 10px;
 }
 
 h1 {
@@ -48,9 +59,8 @@ button:hover {
     text-decoration: underline;
 }
 
-.content {
+#content {
     max-width: 1440px;
-    padding: 10px;
 }
 
 .navbar {
@@ -88,7 +98,7 @@ li {
 }
 
 .hero {
-    color: hsl(0,0%,100%);
+    color: #E5E7EB;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,9 +145,290 @@ li {
     }
 }
 
+.menu {
+    color: hsl(0,0%,100%);
+    background: hsl(210, 4%, 9%);
+    text-align: center;
+    padding-top: 10px;
+}
 
+.menu .title {
+    color: hsl(38, 61%, 73%);
+    font-family: 'Fraunces', serif;
+   font-size: 1rem;
+   margin: 12px;
+   text-transform: uppercase;
+}
 
-/* #E5E7EB */
-/* #1F2937 */
+.menu .title-para {
+    color: hsl(38, 61%, 73%);
+    font-size: 2rem;
+    margin-block-end: 30px;
+}
+
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.menu-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.menu-card figure {
+    height: 100px;
+    width: 100px;
+}
+
+.menu-card figure img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.menu-card .title-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.menu-card .title-wrapper h3 {
+    text-transform: capitalize;
+}
+
+.menu-card .title-wrapper .title-price {
+    color: hsl(38, 61%, 73%);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.menu-card .title-wrapper .title-price::before {
+    content: "";
+    height: 6px;
+    flex-grow: 1;
+    border-block: 1px solid hsla(0, 0%, 100%, 0.2);
+}
+
+.menu-card .card-text {
+    color: hsla(0, 0%, 65%, 1);
+    font-size: 12px;
+}
+
+.events {
+    color: hsl(38, 61%, 73%);
+    background: hsl(57, 100%, 91%);
+    text-align: center;
+    max-height: 700px;
+    padding: 10px;
+}
+
+.events .title {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.events .title-text {
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.grid-event {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+}
+
+.event-card {
+    height: 360px;
+    width: 320px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.event-card img {
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.event-card:is(:hover, :focus-within){
+    transform: scale(1.05);
+}
+
+.hover\:shine { position: relative; }
+
+.hover\:shine::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to right, transparent 0%, #fff6 100%);
+}
+
+.hover\:shine:is(:hover, :focus-within)::after {
+  transition: 100s ease;
+}
+
+.event-card .text-event {
+    color: hsl(0,0%, 20%);
+    padding: 10px;
+}
+
+.galley {
+    background: #E5E7EB;
+    text-align: center;
+    padding: 10px;
+}
+
+.galley .title {
+    color: hsl(38, 61%, 73%);
+    font-family: 'Fraunces', serif;
+    margin: 10px;
+}
+
+.galley-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.image {
+    padding: 20px;
+}
+
+.image img {
+    border-radius: 10px;
+    height: 400px;
+    width: 400px;
+}
+
+.contact {
+    background: hsla(0, 0%, 0%, 1);
+    text-align: center;
+    padding: 20px;
+}
+
+.contact .title {
+    font-family: 'Fraunces', serif;
+    font-size: 1rem;
+    color: hsl(38, 61%, 73%);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.contact .contact-text {
+    font-size: 2rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.contact span {
+    color: rgb(240, 36, 155);
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.contact .contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-self: center;
+    padding: 20px;
+}
+
+.contact .form-left {
+    padding: 20px 30px;
+}
+
+.form-text {
+    color: hsl(38, 61%, 73%);
+    padding: 10px;
+}
+
+.input-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.wrapper-input {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    display: block;
+    border: none;
+    height: 200px;
+    width: 100%;
+}
+
+form button {
+    width: 50%;
+    margin-top: 5px;
+}
+
+form button:hover {
+    text-decoration: none;
+}
+
+input {
+    padding: 10px;
+    border: none;
+}
+
+.form-right {
+    color: #fafbfd;
+    margin: 70px 0;
+}
+
+.form-right .form-text {
+    color: hsl(38, 61%, 73%);
+    font-size: 2rem;
+}
+.form-right .right-text {
+    color: #fafbfd;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.form-right address {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.form-right address a {
+    color: #5deffd;
+    padding: 5px;
+}
+
+.attribution {
+    color: #5deffd;
+    background: #1F2937;
+    text-align: center;
+    font-size: 14px;
+    height: 60px;
+    padding: 20px;
+}
+
 
 

@@ -59,7 +59,7 @@ button:hover {
     text-decoration: underline;
 }
 
-#content {
+.content {
     max-width: 1440px;
 }
 

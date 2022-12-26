@@ -11,6 +11,7 @@ export function galley() {
     sectGalley.classList.add('galley');
     const heading = document.createElement('h3');
     heading.classList.add('title')
+    heading.textContent = "Galley";
     const galleyCard = document.createElement('div');
     galleyCard.classList.add('galley-card');
     const divImage = document.createElement('div');
@@ -41,7 +42,7 @@ export function galley() {
     const divImage6 = document.createElement('div');
     divImage6.classList.add('image');
     const Image6 = document.createElement('img');
-    Image.src = galleyImg6;
+    Image6.src = galleyImg6;
     Image6.alt = "galley-img-6";
 
     content.appendChild(sectGalley);
@@ -68,7 +69,7 @@ export function galley() {
     return content;
 }
 
-document.body.appendChild(galley());
+
 
 {/* <section class="galley">
 <h3 class="title">Galley</h3>

@@ -5,8 +5,8 @@ import { galley } from './galley.js';
 import { events } from './events.js';
 import { contact } from './contact.js';
 
-initialLoadPage();
-menu();
-events();
-galley();
-contact();
+document.body.appendChild(initialLoadPage());
+document.body.appendChild(menu());
+document.body.appendChild(galley());
+document.body.appendChild(events());
+document.body.appendChild(contact());

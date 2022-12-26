@@ -5,8 +5,13 @@ import weddingDay from "./assets/arjun-mj-UEeiZeKFlks-unsplash.jpg"
 export function events() {
     const content = document.querySelector('.content');
     const sectEvents = document.createElement('section');
+    sectEvents.classList.add('events');
     const heading = document.createElement('h2');
+    heading.classList.add('title');
+    heading.textContent = "Events";
     const para = document.createElement('p');
+    para.classList.add('title-text');
+    para.textContent = "Top notch Events";
     const eventGrid =  document.createElement('ul');
     eventGrid.classList.add('grid-event');
     const list = document.createElement('li');
@@ -61,7 +66,7 @@ export function events() {
     return content;
 }
 
-document.body.appendChild(events());
+
 {/* <section class="events">
 <h2 class="title">Events</h2>
 <p class="title-text">Top notch Events</p>

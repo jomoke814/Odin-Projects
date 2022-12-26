@@ -91,7 +91,7 @@ export function initialLoadPage() {
 
 };
 
-document.body.appendChild(initialLoadPage());
+
 {/* <header>
 <div class="navbar">
     <div class="logo"></div>

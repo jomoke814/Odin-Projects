@@ -152,7 +152,7 @@ export function contact() {
     return content;
 }
 
-document.body.appendChild(contact());
+
 {/* <section class="contact">
             <h2 class="title">contact</h2>
             <p class="contact-text">Feel free to <span>contact us</span>  or make a <span>Reservation</span>  with us.</p>
